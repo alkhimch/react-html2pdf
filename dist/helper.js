@@ -37,5 +37,6 @@ function print() {
         pdf.addImage(imgData, 'PNG', 0, 0);
         pdf.save(name + '.pdf');
     });
+    if(child)  element.firstChild.style.boxShadow = "";
 
 }
