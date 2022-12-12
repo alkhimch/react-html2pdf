@@ -28,7 +28,6 @@ function print() {
     }
     var child = element.firstChild
     if (child) {
-        console.log("child found");
         element.firstChild.style.boxShadow = "unset";
         element.firstChild.style.display = "block";
         element.firstChild.style.width = `calc( 100% - ${padding})`;
