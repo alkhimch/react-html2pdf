@@ -26,7 +26,8 @@ function print() {
         console.warn('failed to copy dom for pdf print');
         return false;
     }
-    if(element.firstChild){
+    var child = element.firstChild
+    if(child){
         console.log("child found");
         element.firstChild.style.boxShadow = "unset";
         element.firstChild.style.display = "block";
@@ -37,4 +38,6 @@ function print() {
         pdf.addImage(imgData, 'PNG', 0, 0);
         pdf.save(name + '.pdf');
     });
+    if(child) element.firstChild = child;
+
 }
