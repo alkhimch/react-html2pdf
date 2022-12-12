@@ -18,6 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function print() {
     var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'document';
     var id = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'root';
+    var padding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '48px';
 
     var element = document.querySelector('#' + id);
     if (!element) {
@@ -26,10 +27,11 @@ function print() {
         return false;
     }
     var child = element.firstChild
-    if(child){
+    if (child) {
         console.log("child found");
         element.firstChild.style.boxShadow = "unset";
         element.firstChild.style.display = "block";
+        element.firstChild.style.width = `{calc(100% - ${padding})`;
     }
     (0, _html2canvas2.default)(element).then(function (canvas) {
         var imgData = canvas.toDataURL('image/png');
@@ -37,6 +39,9 @@ function print() {
         pdf.addImage(imgData, 'PNG', 0, 0);
         pdf.save(name + '.pdf');
     });
-    if(child)  element.firstChild.style.boxShadow = "";
+    if (child) {
+        element.firstChild.style.boxShadow = "";
+        element.firstChild.style.width = "";
 
+    }
 }
