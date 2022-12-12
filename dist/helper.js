@@ -26,7 +26,7 @@ function print() {
         console.warn('failed to copy dom for pdf print');
         return false;
     }
-    child = element.firstChild
+    var child = element.firstChild
     if(child){
         console.log("child found");
         element.firstChild.style.boxShadow = "unset";
