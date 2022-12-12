@@ -26,10 +26,10 @@ function print() {
         console.warn('failed to copy dom for pdf print');
         return false;
     }
-    var child = element.firstChild;
-    if(child){
-        child.style.boxShadow = "unset";
-        child.style.display = "block";
+    if(element.firstChild){
+        console.log("child found");
+        element.firstChild.style.boxShadow = "unset";
+        element.firstChild.style.display = "block";
     }
     (0, _html2canvas2.default)(element).then(function (canvas) {
         var imgData = canvas.toDataURL('image/png');
