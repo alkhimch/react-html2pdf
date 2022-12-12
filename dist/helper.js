@@ -19,14 +19,14 @@ function print() {
     var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'document';
     var id = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'root';
 
-    var element = document.querySelector('#' + id);
-    
+    var rootElement = document.querySelector('#' + id);
+    var element = rootElement; 
     if (!element) {
         console.log('%c Pdf generate error', 'font-weight: bold; font-size: 15px; color: red; text-shadow: 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black ');
         console.warn('failed to copy dom for pdf print');
         return false;
     }
-    var child = element.firstChild
+    child = element.firstChild
     if(child){
         console.log("child found");
         element.firstChild.style.boxShadow = "unset";
@@ -38,6 +38,5 @@ function print() {
         pdf.addImage(imgData, 'PNG', 0, 0);
         pdf.save(name + '.pdf');
     });
-    if(child) element.firstChild = child;
 
 }
