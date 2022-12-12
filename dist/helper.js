@@ -10,6 +10,7 @@ var _jspdf = require('jspdf');
 var _jspdf2 = _interopRequireDefault(_jspdf);
 
 var _html2canvas = require('html2canvas');
+var cloneDeep = require('lodash.clonedeep');
 
 var _html2canvas2 = _interopRequireDefault(_html2canvas);
 
@@ -20,7 +21,7 @@ function print() {
     var id = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'root';
 
     var rootElement = document.querySelector('#' + id);
-    var element = rootElement; 
+    var element = cloneDeep(rootElement); 
     if (!element) {
         console.log('%c Pdf generate error', 'font-weight: bold; font-size: 15px; color: red; text-shadow: 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black ');
         console.warn('failed to copy dom for pdf print');
