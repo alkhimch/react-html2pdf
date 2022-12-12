@@ -20,10 +20,16 @@ function print() {
     var id = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'root';
 
     var element = document.querySelector('#' + id);
+    
     if (!element) {
         console.log('%c Pdf generate error', 'font-weight: bold; font-size: 15px; color: red; text-shadow: 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black ');
         console.warn('failed to copy dom for pdf print');
         return false;
+    }
+    var child = element.firstChild;
+    if(child){
+        child.style.boxShadow = "unset";
+        child.style.display = "block";
     }
     (0, _html2canvas2.default)(element).then(function (canvas) {
         var imgData = canvas.toDataURL('image/png');
