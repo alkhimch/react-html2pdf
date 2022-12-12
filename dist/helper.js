@@ -31,7 +31,7 @@ function print() {
         console.log("child found");
         element.firstChild.style.boxShadow = "unset";
         element.firstChild.style.display = "block";
-        element.firstChild.style.width = `{calc(100% - ${padding})`;
+        element.firstChild.style.width = `calc(100% - ${padding})`;
     }
     (0, _html2canvas2.default)(element).then(function (canvas) {
         var imgData = canvas.toDataURL('image/png');
