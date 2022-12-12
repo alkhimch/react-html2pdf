@@ -32,6 +32,7 @@ function print() {
         element.firstChild.style.boxShadow = "unset";
         element.firstChild.style.display = "block";
         element.firstChild.style.width = `calc( 100% - ${padding})`;
+        element.firstChild.style.padding = "unset";
     }
     (0, _html2canvas2.default)(element).then(function (canvas) {
         var imgData = canvas.toDataURL('image/png');
@@ -42,6 +43,7 @@ function print() {
     if (child) {
         element.firstChild.style.boxShadow = "";
         element.firstChild.style.width = "";
+        element.firstChild.style.padding = "";
 
     }
 }
