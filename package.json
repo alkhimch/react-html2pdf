@@ -1,6 +1,6 @@
 {
-  "name": "react-html2pdf",
-  "version": "1.0.1",
+  "name": "react-html2pdf-forked",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy"
   },
-  "author": "sanpyaelin",
+  "author": "shinenbayar",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -40,7 +40,7 @@
   "description": "pdf generate libs for react js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sanpyaelin/react-html2pdf.git"
+    "url": "git+https://github.com/alkhimch/react-html2pdf.git"
   },
   "keywords": [
     "pdf",
@@ -51,7 +51,7 @@
     "print"
   ],
   "bugs": {
-    "url": "https://github.com/sanpyaelin/react-html2pdf/issues"
+    "url": "https://github.com/alkhimch/react-html2pdf/issues"
   },
-  "homepage": "https://github.com/sanpyaelin/react-html2pdf#readme"
+  "homepage": "https://github.com/alkhimch/react-html2pdf#readme"
 }
